@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "CSE" },
+  { "id": 2, "name": "ISE" },
+  { "id": 3, "name": "ECE" },
+  { "id": 4, "name": "MECH" },
+  { "id": 5, "name": "CIVIL" },
+  { "id": 6, "name": "TCE" },
+  { "id": 7, "name": "MBA" },
+  { "id": 8, "name": "MCA" },
+  { "id": 9, "name": "Basic Science" }
+]

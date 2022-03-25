@@ -1,0 +1,88 @@
+<%- include('../partials/header.ejs') %>
+<div class="container-fluid px-5 pt-2">
+
+
+    <!-- Data Entry -->
+
+    <section id="form">
+
+        <form action="/search" method="post">
+
+
+
+            <div class="row data-row">
+                <h4 class="mb-3 title mt-4">Student Report</h4>
+                <div class="col-md-12 mb-3">
+                    <label>Event</label>
+                    <select class="custom-select d-block w-100" name="event" required>
+                        <option value="">Choose...</option>
+                        <option value="all">All</option>
+                        <option value="awards">Awards & Achievements</option>
+                        <option value="sponsored_research_projects">Research Projects</option>
+                        <option value="patent">Patent</option>
+                        <option value="results">Results</option>
+
+
+
+                    </select>
+                </div>
+            </div>
+            <div class="row data-row">
+                <div class="col-md-6 mb-3">
+                    <label for="fromDate">From Date</label>
+                    <input type="date" name="fromDate" class="form-control" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="toDate">To Date</label>
+                    <input type="date" name="toDate" class="form-control" required>
+                </div>
+            </div>
+            <div class="row data-row">
+                <div class="col-md-6 mb-3">
+                    <label for="isDescriptionRequired">Details Required</label>
+                    <select class="custom-select d-block w-100" name="isDescriptionRequired" required>
+                        <option value="">Choose...</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="department">Departments</label>
+                    <%- include ("../partials/department") %>
+                </div>
+            </div>
+            <div class="row data-row">
+                <div class="col-md-12 mb-3">
+                    <label for="coe">COE</label>
+                    <%- include ("../partials/coe") %>
+
+                    <div class="invalid-feedback">
+                        Please select a valid type.
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="submit-button"><button class="btn btn-primary btn-lg btn-block buttons" type="submit">
+                            Search</button>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </form>
+    </section>
+
+</div>
+
+<!-- Report Table -->
+
+<!-- Footer -->
+<%- include ("../partials/footer") %>
+
+</body>
+
+</html>

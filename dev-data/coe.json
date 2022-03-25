@@ -1,0 +1,18 @@
+[
+  { "id": 1, "name": "Additive Manufacturing" },
+  { "id": 2, "name": "Data-Driven Internet of Things" },
+  { "id": 3, "name": "Integrated Circuits" },
+  { "id": 4, "name": "Intelligent Energy Systems" },
+  { "id": 5, "name": "Intelligent Human Computer Interaction" },
+  { "id": 6, "name": "Machine Intelligence and Bigdata" },
+  { "id": 7, "name": "Material Sciences" },
+  { "id": 8, "name": "Metallurgical Engineering" },
+  { "id": 9, "name": "Natural Resource Management" },
+  { "id": 10, "name": "Sensors and Nanoelectronics" },
+  { "id": 11, "name": "Signal Processing" },
+  { "id": 12, "name": "Financial Markets" },
+  { "id": 13, "name": "Intelligent Robotics System" },
+  { "id": 14, "name": "Embedded System" },
+  { "id": 15, "name": "Modeling of Dynamic Systems" },
+  { "id": 16, "name": "Not Available" }
+]

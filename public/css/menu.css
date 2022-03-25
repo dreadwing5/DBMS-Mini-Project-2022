@@ -1,0 +1,117 @@
+.nav__menu--submenu {
+  display: none;
+  font-size: 0.875rem;
+  color: #212529;
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  background-clip: padding-box;
+  padding: 40px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 80%;
+  left: 0;
+  right: 0;
+  top: 100%;
+  animation: fadeInAnimation ease 0.3s;
+
+  animation-duration: 0.3s, 0.3s;
+  animation-timing-function: ease, ease-out;
+  animation-delay: 0s, 0s;
+  animation-iteration-count: 1, 1;
+  animation-direction: normal, normal;
+  animation-fill-mode: none, none;
+  animation-play-state: running, running;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.submenu--active {
+  display: block;
+}
+.menu-content > .menu-item {
+  border-right: 1px solid #ebedf3;
+}
+
+.menu-item:last-child {
+  border-right: 0 !important;
+}
+
+.menu-content {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.menu-content ul {
+  list-style: none;
+}
+
+.menu-inner {
+  padding: 0 0 20px 0;
+}
+
+.menu-content .menu-item {
+  display: flex;
+}
+
+.menu-item > .menu-link {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 11px 20px;
+  flex-grow: 1;
+  text-decoration: none;
+  position: relative;
+  align-items: center;
+}
+
+.menu-item > .menu-link:hover {
+  background-color: #f3f6f9;
+  transition: all 0.3s ease;
+}
+
+.menu-link .menu-text {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: initial;
+  display: flex;
+  color: #3f4254;
+}
+
+@media (max-width: 1400px) {
+  .menu-link .menu-text {
+    font-weight: 600;
+    font-size: 0.675rem;
+    text-transform: initial;
+    display: flex;
+    color: #3f4254;
+  }
+}
+
+.menu-link .menu-text:hover {
+  color: #6993ff;
+}
+
+.menu-bullet {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+  font-size: 0.3rem;
+  color: #5e6278;
+}
+
+.nav__menu--active {
+  display: block;
+}

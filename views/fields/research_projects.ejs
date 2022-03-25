@@ -1,0 +1,201 @@
+<%- include ("../partials/header") %>
+
+<div class="container-fluid px-5 pt-2">
+  <section id="form">
+    <form id="myForm" class="needs-validation" novalidate action="/faculty/SponsoredResearchProjects"
+      data-isinsertmode=<%=isInsertMode%>>
+
+
+      <!-- Header Section -->
+
+      <div class="row data-row">
+        <div class="col-md-8 mb-3">
+          <h4 class="mb-3 title">Sponsored Research Projects</h4>
+        </div>
+        <div class="col-md-4 mb-3 report">
+          <a href="/faculty/search" class="btn btn-sm btn-primary shadow-sm"><i
+              class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+        </div>
+      </div>
+
+      <div class="row data-row">
+
+        <div class="col-md-6 mb-3">
+          <label for="date" class="required">Amount Sanctioned Date</label>
+          <input type="date" name="sanctionDate" class="form-control date__control start__date">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="date" class="required">Date of Received Grant Amount</label>
+          <input type="date" name="grantDate" class="form-control end__date">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+
+      </div>
+      <div class="row data-row">
+
+        <div class="col-md-6 mb-3">
+          <label class="required">RCID</label>
+          <input type="text" name="rcid" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="required">Title of Project</label>
+          <input type="text" name="title" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+      </div>
+      <div class="row data-row">
+
+        <div class="col-md-6 mb-3">
+          <label class="required">Proposed Project Amount</label>
+          <input type="text" name="proposedAmount" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="required">Duration</label>
+          <input type="text" name="durationYear" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="required">Grant amount received till date</label>
+          <input type="text" name="amount" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="required">Total Grant Sanctioned</label>
+          <input type="text" name="received" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+
+
+        <div class="col-md-6 mb-3">
+          <label class="required">Benefit in terms of learning/Skill/Knowledge obtained</label>
+          <input type="text" name="benefit" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="required">Funding Agency & Scheme</label>
+          <input type="text" name="AgencyName" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="required">Objectives</label>
+          <input type="text" name="objectives" class="form-control">
+          <div class="invalid-feedback">
+            Please enter valid details.
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="required">COE</label>
+
+          <!-- COE  -->
+
+          <%- include ("../partials/coe") %>
+
+          <div class="invalid-feedback">
+            Please select a valid type.
+          </div>
+        </div>
+
+
+      </div>
+      <div class="row data-row">
+
+
+        <div class="col-md-6 mb-3">
+          <label class="required">Category</label>
+          <select name="level" class="custom-select d-block w-100">
+            <option value="">Choose...</option>
+            <option>Industry Sponsored Projects</option>
+            <option>Interdisciplinary Projects</option>
+            <option>Major</option>
+            <option>Minor</option>
+            <option>Projects sponsored by University/College</option>
+            <option>Student Research Projects</option>
+
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid type.
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="required">Status</label>
+          <select name="status" class="custom-select d-block w-100">
+            <option value="">Choose...</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid type.
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="row data-row">
+        <div class="col-md-12 mb-3">
+          <%- include ("../partials/description") %>
+
+
+          <div class="submit-button">
+            <%if(isInsertMode){%>
+            <button class="btn btn-primary btn-lg btn-block buttons" type="submit">
+              Submit</button>
+            <%} else{%>
+            <button class="btn btn-secondary btn-lg btn-block buttons" type="submit">
+              Update</button>
+            <span id='variableJSON' hidden>
+              <%= JSON.stringify(data); %>
+            </span>
+            <%}%>
+              </div>
+          </div>
+        </div>
+
+
+
+      </form>
+
+
+
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+
+
+  <%- include ("../partials/footer") %>
+
+
+            </script>
+
+            </body>
+
+            </html>

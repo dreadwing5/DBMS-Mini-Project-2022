@@ -1,0 +1,96 @@
+<%- include ("./partials/header") %>
+<%- include ("../partials/messages") %>
+
+<!-- Begin Page Content -->
+<div class="container-fluid px-5 pt-2">
+
+    <section id="form">
+
+        <form action="/register" method="post">
+            <!-- <form actionid="studentReport" class="needs-validation" novalidate=""> -->
+            <div class="container-fluid px-5 pt-2">
+
+
+                <div class="row data-row">
+                    <h4 class="mb-3 title">Add User</h4>
+                    <div class="col-md-6 mb-3">
+                        <label class="required">User ID</label>
+                        <input type="text" name="id" class="form-control"
+                            value="<%= typeof id != 'undefined' ? id : '' %>">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="required">Full Name</label>
+                        <input type="text" name="name" class="form-control"
+                            value="<%= typeof name != 'undefined' ? name : '' %>">
+                    </div>
+
+                </div>
+                <div class="row data-row">
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label class="required">Email</label>
+                            <input type="email" class="form-control" name="mailid" id="" aria-describedby="emailHelpId"
+                                value="<%= typeof email != 'undefined' ? email : '' %>">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label class="required">Password</label>
+                            <input type="password" class="form-control" name="password" id="" placeholder=""
+                                value="<%= typeof password != 'undefined' ? password : '' %>">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label class="required">Confirm Password</label>
+                            <input type="password" class="form-control" name="password2"
+                                value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+                        </div>
+                    </div>
+                </div>
+                <div class="row data-row">
+                    <div class="col-md-4 mb-3">
+                        <label>Joining Date</label>
+                        <input type="date" class="form-control" name="joiningDate"
+                            value="<%= typeof joiningDate != 'undefined' ? joiningDate : '' %>">
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <div class="form-group">
+                            <label for="">Phone Number</label>
+                            <input type="text" class="form-control" name="phoneNumber" id="" placeholder=""
+                                value="<%= typeof phoneNumber != 'undefined' ? phoneNumber : '' %>">
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="">Department</label>
+                        <select class="custom-select d-block w-100" name="department"
+                            value="<%= typeof department != 'undefined' ? department : '' %>">
+                            <option value="">Choose...</option>
+                            <option value="cse">CSE</option>
+                            <option value="ise">ISE</option>
+                            <option value="ece">ECE</option>
+                            <option value="mech">MECH</option>
+                            <option value="civ">CIVIL</option>
+                            <option value="tce">TCE</option>
+                            <option value="mba">MBA</option>
+                            <option value="mca">MCA</option>
+                            <option value="ise">BASIC SCIENCE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="submit-button">
+                    <button class="btn btn-primary btn-lg btn-block buttons" type="submit">Add User</button>
+                </div>
+
+            </div>
+
+
+        </form>
+    </section>
+
+
+</div>
+<!-- /.container-fluid -->
+
+<%- include ("./partials/footer") %>

@@ -1,0 +1,78 @@
+<%- include ("./partials/header") %>
+
+  <!-- End of Topbar -->
+
+
+  <!-- Begin Page Content -->
+  <div class="container-fluid px-5 pt-2">
+    <!-- Alert Message -->
+
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2 class="table__name--dropdown" data-table-name="<%=title.toLowerCase()%>">
+              <%=title%> Details
+            </h2>
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-info add-new">
+              <i class="fa fa-plus"></i> Add New
+            </button>
+          </div>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="field__id">#</th>
+            <th>Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="field--table__data">
+
+          <%fields.map(({id,name},index)=>{%>
+            <tr class="table__field">
+              <td class="field__idx">
+                <%=++index%>
+              </td>
+              <td>
+                <%=name%>
+              </td>
+
+              <td class="field__id" data-id="<%=id%>">
+                <a class="delete__field" title="Delete" data-toggle="tooltip"><i
+                    class="material-icons delete__entry">&#xE872;</i></a>
+              </td>
+            </tr>
+
+
+            <%})%>
+
+              <tr class="hidden-row" style="display: none;">
+                <td class="row__number"></td>
+                <td><input type="text" class="form-control field__name" name="name" id="name">
+                  <div style="display: none" class="text-danger">
+                    Name is Required
+                  </div>
+                </td>
+                <td>
+                  <a class="delete__field" title="Delete" data-toggle="tooltip"><i
+                      class="material-icons">&#xE872;</i></a>
+                </td>
+              </tr>
+
+
+        </tbody>
+      </table>
+      <div class="submit-button">
+        <button disabled class="btn btn-primary btn-lg btn-block buttons table__submit--button" type="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+  <%- include ("./partials/footer") %>
+
+    <!-- Footer-->

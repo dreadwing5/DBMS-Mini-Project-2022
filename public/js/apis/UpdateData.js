@@ -18,7 +18,7 @@ export const updateData = async (data) => {
     const resp = await axios.put(updateUrl, data);
     renderMessage();
     await wait(1);
-    window.location.href = `/student/${event}`;
+    window.location.href = `/faculty/${event}`;
   } catch (err) {
     // Handle Error Here
     renderErrorMessage();

@@ -18,7 +18,8 @@ async function seedDatabase() {
     const coePromises = coes.map((coe) =>
       db.query("INSERT INTO coe SET ?", coe)
     );
-    await Promise.all(promises, coePromises);
+    await Promise.all(promises);
+    await Promise.all(coePromises);
     console.log("Department Added Successfully :) ");
     console.log("COE Added Successfully :) ");
     db.close();

@@ -8,7 +8,7 @@
     "dev": "webpack --watch --config webpack.dev.config.js",
     "prod": "webpack  --config webpack.production.config.js",
     "seeddb": "node db/seedDB.js",
-    "seeddb-prod": "node db/createDB && npm run seeddb"
+    "seeddb-prod": "node db/createDB && npm run seeddb && node ./dev-data/import-data.js"
   },
   "repository": {
     "type": "git",

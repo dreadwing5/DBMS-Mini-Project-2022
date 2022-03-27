@@ -1,13 +1,17 @@
+const dotenv = require("dotenv");
+dotenv.config({
+  path: "./config.env",
+});
 const mysql = require("mysql2");
 const util = require("util");
 
 const CONNECTION_CONFIG = {
-  host: "localhost",
-  user: "root",
-  password: "",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
 };
 
-const CREATE_DATABASE = `Create Database data_repository`;
+const CREATE_DATABASE = `Create Database faculty_db`;
 
 const createDBConnection = async () => {
   try {

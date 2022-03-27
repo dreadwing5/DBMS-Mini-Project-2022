@@ -21,7 +21,7 @@ exports.CREATE_AWARDS_TABLE = `CREATE TABLE IF NOT EXISTS awards (
   PRIMARY KEY (id)
 )`;
 
-exports.RESEARCH_PROJECTS_TABLE = `CREATE TABLE IF NOT EXISTS sponsored_research_projects (
+exports.CREATE_RESEARCH_PROJECTS_TABLE = `CREATE TABLE IF NOT EXISTS sponsored_research_projects (
     id int NOT NULL AUTO_INCREMENT,
     facultyId varchar(255) DEFAULT NULL,
     NameofPI varchar(255) DEFAULT NULL,
@@ -48,7 +48,7 @@ exports.RESEARCH_PROJECTS_TABLE = `CREATE TABLE IF NOT EXISTS sponsored_research
 
 exports.CREATE_PATENT_TABLE = `CREATE TABLE IF NOT EXISTS patent(
         id int NOT NULL AUTO_INCREMENT,
-        rcid varchar(255) CHARACTER DEFAULT NULL,
+        rcid varchar(255) DEFAULT NULL,
         grantDate date DEFAULT NULL,
         submissionDate date DEFAULT NULL,
         duration varchar(255) DEFAULT NULL,

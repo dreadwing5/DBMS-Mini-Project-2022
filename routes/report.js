@@ -54,7 +54,7 @@ function handleRoute(req, res) {
   };
 
   const getAllTables = () => {
-    let sql = `SELECT table_name FROM information_schema.tables WHERE table_schema = "data_repository"`;
+    let sql = `SELECT table_name FROM information_schema.tables WHERE table_schema = "faculty_db"`;
 
     connection.query(sql, (err, result) => {
       if (err) console.log(err);

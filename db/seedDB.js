@@ -5,7 +5,7 @@ const {
   CREATE_FACULTY_TABLE,
   CREATE_AWARDS_TABLE,
   CREATE_RESULTS_TABLE,
-  CREATE_RESEARCH_PROJECT_TABLE,
+  CREATE_RESEARCH_PROJECTS_TABLE,
   CREATE_PATENT_TABLE,
   CREATE_DEPARTMENT_LIST_TABLE,
   CREATE_COE_TABLE,
@@ -22,7 +22,6 @@ const seedDatabase = async function () {
     }
     const execQuery = util.promisify(connection.query.bind(connection));
     await createTable(execQuery);
-    // await execQuery(CREATE_FACULTY_TABLE);
 
     console.log("Created Tables Successfully! :)");
     connection.end();
@@ -36,7 +35,7 @@ const createTable = async function (execQuery) {
     await execQuery(CREATE_FACULTY_TABLE);
     await execQuery(CREATE_AWARDS_TABLE);
     await execQuery(CREATE_RESULTS_TABLE);
-    await execQuery(CREATE_RESEARCH_PROJECT_TABLE);
+    await execQuery(CREATE_RESEARCH_PROJECTS_TABLE);
     await execQuery(CREATE_PATENT_TABLE);
     await execQuery(CREATE_DEPARTMENT_LIST_TABLE);
     await execQuery(CREATE_COE_TABLE);
